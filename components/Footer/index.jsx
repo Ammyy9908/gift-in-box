@@ -84,7 +84,7 @@ function Footer() {
       <div className="footer-bottom flex flex-col md:flex-row items-center justify-center gap-2 w-full">
         <p>8:00am – 5:00pm PT, Monday - Friday</p>
         <p>206-557-4525</p>
-        <p>help@knackshops.com</p>
+        <p>help@company.com</p>
       </div>
     </footer>
   );
