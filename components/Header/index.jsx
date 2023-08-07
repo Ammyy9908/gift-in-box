@@ -2,7 +2,7 @@ import React from "react";
 
 function Header() {
   return (
-    <div className="w-full px-12 py-6 flex items-center justify-between gap-32">
+    <div className="w-full px-6 md:px-12 py-6 flex items-center justify-between gap-32">
       <a href="#" className="px-2 py-2  rounded-md flex items-center gap-2">
         <img
           src="/logo.png"
@@ -10,28 +10,28 @@ function Header() {
           className="w-12 h-12 shadow-md rounded-full"
         />
 
-        <span className="font-semibold">Gift In Box</span>
+        <span className="font-semibold">Giftinbox</span>
       </a>
       <nav className="navbar hidden md:block">
         <ul className="w-full flex items-center justify-start gap-4">
           <li>
             <a href="#" className="transition-all">
-              Shop Gifts
+              Services
             </a>
           </li>
           <li>
             <a href="#" className="transition-all">
-              Build A Gift
+              Gift Catalog
             </a>
           </li>
           <li>
             <a href="#" className="transition-all">
-              Gift By Ethos
+              Testimonials
             </a>
           </li>
           <li>
             <a href="#" className="transition-all">
-              Let Them Choose
+              Contact
             </a>
           </li>
         </ul>
