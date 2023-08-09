@@ -16,42 +16,9 @@ function Footer() {
               <li>
                 <a href="#">About Us</a>
               </li>
-              <li>
-                <a href="#">Packaging and Branding</a>
-              </li>
-              <li>
-                <a href="#">Affilate Program</a>
-              </li>
+
               <li>
                 <a href="#">Our Branding Partners</a>
-              </li>
-            </ul>
-          </div>
-          <div className="footer-link-box">
-            <h3 className="text-xl font-semibold uppercase">Help</h3>
-            <ul>
-              <li>
-                <a href="#">Contact</a>
-              </li>
-              <li>
-                <a href="#">Shipping</a>
-              </li>
-              <li>
-                <a href="#">Returns</a>
-              </li>
-              <li>
-                <a href="#">FAQ</a>
-              </li>
-            </ul>
-          </div>
-          <div className="footer-link-box">
-            <h3 className="text-xl font-semibold uppercase">Connect</h3>
-            <ul>
-              <li>
-                <a href="#">Blog</a>
-              </li>
-              <li>
-                <a href="#">Press</a>
               </li>
             </ul>
           </div>
