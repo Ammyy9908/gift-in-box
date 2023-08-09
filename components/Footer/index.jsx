@@ -16,7 +16,6 @@ function Footer() {
               <li>
                 <a href="#">About Us</a>
               </li>
-
               <li>
                 <a href="#">Our Branding Partners</a>
               </li>

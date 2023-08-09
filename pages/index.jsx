@@ -126,7 +126,7 @@ export default function Home() {
         </div>
       </section> */}
 
-      <section className="brand-keypoints px-16 md:px-32 py-16 bg-pink-100">
+      <section className="brand-keypoints px-6 md:px-32 py-16 bg-green-100">
         <h1 className="text-center text-2xl">The Knack Difference</h1>
         <div className="keypoints grid grid-cols-1 md:grid-cols-2 gap-16 mt-12">
           <KeyPoint />
@@ -136,7 +136,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 px-12 md:px-32">
+      <section className="py-16 px-6 md:px-32">
         <div className="special-product-hero grid grid-cols-1 lg:grid-cols-2 gap-32">
           <img src="http://via.placeholder.com/640x460" alt="special-gif-box" />
           <div className="special-product-content">
@@ -158,7 +158,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bestseller-section py-16 px-16 md:px-32">
+      <section className="bestseller-section py-16 px-4 md:px-32">
         <div className="best-seller-header">
           {/* <h2 className="text-center">Shop Bestsellers By Price</h2>
           <div className="bestseller-filters mt-12 flex flex-col lg:flex-row items-center justify-center gap-12">
@@ -193,7 +193,7 @@ export default function Home() {
             </div>
             <a
               href="/documents/catalog.pdf"
-              className="mt-12 flex items-center justify-center bg-black text-white w-[175px] py-3 mx-auto"
+              className="mt-12 flex items-center justify-center bg-green-700 text-white w-[175px] py-3 mx-auto"
             >
               View Catalog
             </a>
@@ -215,7 +215,7 @@ export default function Home() {
                 // width: 576,
                 slidesPerView: 2,
               },
-              768: {
+              1012: {
                 // width: 768,
                 slidesPerView: 3,
               },
@@ -273,7 +273,7 @@ export default function Home() {
         </div>
       </section> */}
 
-      <section className="who-we-are-section py-32 px-16 bg-[#F6FAFF]">
+      <section className="who-we-are-section py-32 px-4 md:px-16 bg-[#F6FAFF]">
         <h1 className="text-center text-3xl font-bold">Our Services</h1>
         <div className="features w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mt-12">
           {services.map((s, i) => {
@@ -366,7 +366,7 @@ export default function Home() {
               </div>
               <button
                 type="submit"
-                className="w-full h-[42px] bg-[#67C347] text-white font-semibold"
+                className="w-full h-[42px] bg-green-700 text-white font-semibold"
               >
                 Send a message
               </button>
