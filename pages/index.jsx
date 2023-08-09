@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import ProductCard from "@/components/ProductCard";
 import Footer from "@/components/Footer";
 import CollectionCard from "@/components/CollectionCard";
-
+import services from "@/data/services";
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -17,6 +17,7 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import TestimonialCard from "@/components/TetimonialCard";
 import ServiceCard from "@/components/ServiceCard";
+import catalog from "@/data/catalog";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -159,7 +160,7 @@ export default function Home() {
       </section>
       <section className="bestseller-section py-16 px-16 md:px-32">
         <div className="best-seller-header">
-          <h2 className="text-center">Shop Bestsellers By Price</h2>
+          {/* <h2 className="text-center">Shop Bestsellers By Price</h2>
           <div className="bestseller-filters mt-12 flex flex-col lg:flex-row items-center justify-center gap-12">
             <a
               href="#"
@@ -179,26 +180,22 @@ export default function Home() {
             >
               Bestsellers Under $75-$100
             </a>
-          </div>
+          </div> */}
 
-          <div className="bestselller-carousel-gallery mt-16">
+          <div className="bestselller-carousel-gallery mt-16" id="catalog">
             <h1 className="text-center text-3xl">Gift Catalog</h1>
             <div className="products-carousel max-w-[100%] flex overflow-x-auto gap-16 mt-12">
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
+              {catalog.map((c, i) => {
+                return (
+                  <ProductCard key={i} thumbnail={c.thumb} name={c.name} />
+                );
+              })}
             </div>
             <a
-              href="#"
+              href="/documents/catalog.pdf"
               className="mt-12 flex items-center justify-center bg-black text-white w-[175px] py-3 mx-auto"
             >
-              Shop All Bestsellers
+              View Catalog
             </a>
           </div>
         </div>
@@ -279,15 +276,15 @@ export default function Home() {
       <section className="who-we-are-section py-32 px-16 bg-[#F6FAFF]">
         <h1 className="text-center text-3xl font-bold">Our Services</h1>
         <div className="features w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mt-12">
-          <ServiceCard />
-          <ServiceCard />
-          <ServiceCard />
-          <ServiceCard />
-          <ServiceCard />
-          <ServiceCard />
-          <ServiceCard />
-          <ServiceCard />
-          <ServiceCard />
+          {services.map((s, i) => {
+            return (
+              <ServiceCard
+                key={i}
+                title={s.title}
+                description={s.description}
+              />
+            );
+          })}
         </div>
       </section>
 
