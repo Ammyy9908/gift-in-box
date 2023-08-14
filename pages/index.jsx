@@ -69,13 +69,13 @@ function FeatureCard() {
 
 export default function Home() {
   return (
-    <main>
+    <main className="w-full">
       <Header />
       <Swiper
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 2500,
+        //   disableOnInteraction: false,
+        // }}
         pagination={{
           clickable: true,
         }}
@@ -83,27 +83,39 @@ export default function Home() {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper w-full h-[270px] md:h-[450px]"
       >
-        <SwiperSlide>
-          <div className="slide-one">
+        <SwiperSlide className="w-full h-full mr-0">
+          <div className="slide-one w-full h-full">
             <img
-              src="https://confettigifts.in/cdn/shop/files/confett-gifts-personalized-corporate-gifts.jpg?v=1651553643&width=2400"
+              src="/banners/2.png"
               alt=""
+              className="w-full h-full object-cover"
             />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="slide-two">
+          <div className="slide-two w-full h-full mr-0">
             <img
-              src="https://images.unsplash.com/photo-1587052755556-89808205c097?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              src="/banners/3.png"
               alt=""
+              className="w-full h-full object-cover"
             />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="slide-three">
+          <div className="slide-four w-full h-full mr-0">
             <img
-              src="https://images.unsplash.com/photo-1607469256872-48074e807b0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              src="/banners/4.png"
               alt=""
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="slide-five w-full h-full mr-0">
+            <img
+              src="/banners/5.png"
+              alt=""
+              className="w-full h-full object-cover"
             />
           </div>
         </SwiperSlide>

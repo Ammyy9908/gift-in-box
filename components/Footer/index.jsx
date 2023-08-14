@@ -11,7 +11,7 @@ function Footer() {
       <div className="flex flex-col md:flex-row items-start justify-between w-full gap-12">
         <div className="footer-links grid grid-cols-1 md:grid-cols-3 gap-16">
           <div className="footer-link-box">
-            <h3 className="text-xl font-semibold uppercase">Company</h3>
+            <h3 className="text-xl font-semibold uppercase">Giftinbox</h3>
             <ul>
               <li>
                 <a href="#">About Us</a>
