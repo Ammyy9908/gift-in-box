@@ -18,6 +18,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import TestimonialCard from "@/components/TetimonialCard";
 import ServiceCard from "@/components/ServiceCard";
 import catalog from "@/data/catalog";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -70,6 +71,16 @@ function FeatureCard() {
 export default function Home() {
   return (
     <main className="w-full">
+      <Head>
+        <title>Giftinbox</title>
+        <meta name="description" content="Description of my page" />
+        <meta name="keywords" content="my, page, keywords" />
+        <meta property="og:title" content="My Page Title" />
+        <meta property="og:description" content="Description of my page" />
+        <meta property="og:image" content="URL to image" />
+        {/* Add other SEO-related tags here */}
+      </Head>
+
       <Header />
       <Swiper
         // autoplay={{
@@ -148,7 +159,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 px-6 md:px-32">
+      {/* <section className="py-16 px-6 md:px-32">
         <div className="special-product-hero grid grid-cols-1 lg:grid-cols-2 gap-32">
           <img src="http://via.placeholder.com/640x460" alt="special-gif-box" />
           <div className="special-product-content">
@@ -169,7 +180,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <section className="bestseller-section py-16 px-4 md:px-32">
         <div className="best-seller-header">
           {/* <h2 className="text-center">Shop Bestsellers By Price</h2>
@@ -196,13 +207,13 @@ export default function Home() {
 
           <div className="bestselller-carousel-gallery mt-16" id="catalog">
             <h1 className="text-center text-3xl">Gift Catalog</h1>
-            <div className="products-carousel max-w-[100%] flex overflow-x-auto gap-16 mt-12">
+            {/* <div className="products-carousel max-w-[100%] flex overflow-x-auto gap-16 mt-12">
               {catalog.map((c, i) => {
                 return (
                   <ProductCard key={i} thumbnail={c.thumb} name={c.name} />
                 );
               })}
-            </div>
+            </div> */}
             <a
               href="/documents/catalog.pdf"
               className="mt-12 flex items-center justify-center bg-green-700 text-white w-[175px] py-3 mx-auto"
@@ -320,7 +331,7 @@ export default function Home() {
                   <span className="text-xl font-semibold">Office Address</span>
                 </div>
                 <p className="text-sm text-black/70 mt-2">
-                  Main address: 122 Albert St, Melbourne, Australia
+                  302, Udyog Vihar Phase II, Gurgaon, Haryana, 122008
                 </p>
               </div>
               <div className="contact-option">
@@ -331,9 +342,7 @@ export default function Home() {
                   <span className="text-xl font-semibold">Mail Address</span>
                 </div>
                 <p className="text-sm text-black/70 mt-2">
-                  envato@gmail.com
-                  <br />
-                  info@company.com
+                  utsavm@sarvabyanadi.com
                 </p>
               </div>
               <div className="contact-option">
@@ -344,7 +353,7 @@ export default function Home() {
                   <span className="text-xl font-semibold">Phone No</span>
                 </div>
                 <p className="text-sm text-black/70 mt-2">
-                  Head office: (210) 123 451 Help line: 44 321
+                  Head office: +91-9811870360 Help line: +91-9999868080
                 </p>
               </div>
               <div className="contact-option">

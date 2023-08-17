@@ -7,7 +7,10 @@ function Header() {
   return (
     <div className="w-full flex-col items-start ">
       <div className="w-full px-6 md:px-12 py-2 flex items-center justify-between gap-32">
-        <a href="#" className="px-2 py-2  rounded-md flex items-center gap-2">
+        <Link
+          href="/"
+          className="px-2 py-2  rounded-md flex items-center gap-2"
+        >
           <img
             src="/logo.png"
             alt="brand-logo"
@@ -15,7 +18,7 @@ function Header() {
           />
 
           <span className="font-semibold text-2xl">Giftinbox</span>
-        </a>
+        </Link>
         <nav className="navbar hidden md:block">
           <ul className="w-full flex items-center justify-start gap-4">
             <li>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import {
   FaLinkedin,
@@ -14,10 +15,10 @@ function Footer() {
             <h3 className="text-xl font-semibold uppercase">Giftinbox</h3>
             <ul>
               <li>
-                <a href="#">About Us</a>
+                <Link href="/terms-of-service">Our Terms</Link>
               </li>
               <li>
-                <a href="#">Our Branding Partners</a>
+                <Link href="/privacy-policy">Privacy Policy</Link>
               </li>
             </ul>
           </div>
@@ -36,11 +37,6 @@ function Footer() {
             </li>
             <li>
               <a href="#">
-                <FaTwitter />
-              </a>
-            </li>
-            <li>
-              <a href="#">
                 <FaLinkedin />
               </a>
             </li>
@@ -48,9 +44,19 @@ function Footer() {
         </div>
       </div>
       <div className="footer-bottom flex flex-col md:flex-row items-center justify-center gap-2 w-full">
-        <p>8:00am – 5:00pm PT, Monday - Friday</p>
-        <p>206-557-4525</p>
-        <p>help@company.com</p>
+        <p>
+          Copyright © 2023{" "}
+          <Link href="/">
+            <strong>Giftinbox</strong>
+          </Link>
+          . All rights reserved.
+        </p>
+        <p>
+          Designed by{" "}
+          <a href="https://growtho.in">
+            <strong>GrowthO.</strong>
+          </a>
+        </p>
       </div>
     </footer>
   );
