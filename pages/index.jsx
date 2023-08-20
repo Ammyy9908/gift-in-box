@@ -1,26 +1,15 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
 import Header from "@/components/Header";
-import ProductCard from "@/components/ProductCard";
 import Footer from "@/components/Footer";
-import CollectionCard from "@/components/CollectionCard";
 import services from "@/data/services";
-import React, { useRef, useState } from "react";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 
-// import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import TestimonialCard from "@/components/TetimonialCard";
 import ServiceCard from "@/components/ServiceCard";
-import catalog from "@/data/catalog";
 import Head from "next/head";
-
-const inter = Inter({ subsets: ["latin"] });
 
 function FormControl({ type, name, value, setValue, placeholder }) {
   return (
@@ -83,10 +72,10 @@ export default function Home() {
 
       <Header />
       <Swiper
-        // autoplay={{
-        //   delay: 2500,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         pagination={{
           clickable: true,
         }}
@@ -224,7 +213,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="collection-courosel-container py-16 px-6 md:px-32">
+      <section
+        className="collection-courosel-container py-16 px-6 md:px-32"
+        id="testimonials"
+      >
         <div className="collections-container">
           <h1 className="text-center text-3xl font-semibold">Testimonials</h1>
           <Swiper
@@ -248,19 +240,31 @@ export default function Home() {
             className="mySwiper w-full py-6 mt-12"
           >
             <SwiperSlide>
-              <TestimonialCard />
+              <TestimonialCard
+                author={"Sandhya Bhat"}
+                brand={"CNSI"}
+                description={
+                  "I really want to take this opportunity to highly appreciate you and your team for all the coordination and the effort that has taken to reach the parcel to our employees. Keep this good work going and we would like to work with you in future days as well."
+                }
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <TestimonialCard />
+              <TestimonialCard
+                author={"Saranya"}
+                brand={"BAUTOMATE"}
+                description={
+                  "Hi Team, Gift Hampers were awesome & very neatly packed. My leadership team really liked the products. Thanks for your extended support."
+                }
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <TestimonialCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <TestimonialCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <TestimonialCard />
+              <TestimonialCard
+                author={"Anmol Raizada"}
+                brand={"Leaven Essentials"}
+                description={
+                  "We were Truly impressed with the gift boxes we received. The attention to detail was remarkable. Not to mention, the delivery was right on time, which made our experience even better. Thank you for your top-notch service!"
+                }
+              />
             </SwiperSlide>
           </Swiper>
         </div>
@@ -296,7 +300,10 @@ export default function Home() {
         </div>
       </section> */}
 
-      <section className="who-we-are-section py-32 px-4 md:px-16 bg-[#F6FAFF]">
+      <section
+        className="who-we-are-section py-32 px-4 md:px-16 bg-[#F6FAFF]"
+        id="services"
+      >
         <h1 className="text-center text-3xl font-bold">Our Services</h1>
         <div className="features w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mt-12">
           {services.map((s, i) => {
@@ -311,7 +318,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="contact-section py-12 px-5 md:px-16">
+      <section className="contact-section py-12 px-5 md:px-16" id="contact">
         <div className="contact-section-container grid grid-cols-1 md:grid-cols-2 gap-16">
           <div className="contact-left">
             <h2 className="text-4xl">
@@ -353,7 +360,8 @@ export default function Home() {
                   <span className="text-xl font-semibold">Phone No</span>
                 </div>
                 <p className="text-sm text-black/70 mt-2">
-                  Head office: +91-9811870360 Help line: +91-9999868080
+                  Head office: +91-9811870360 <br />
+                  Help line: +91-9999868080
                 </p>
               </div>
               <div className="contact-option">
@@ -364,7 +372,7 @@ export default function Home() {
                   <span className="text-xl font-semibold">Opening Time</span>
                 </div>
                 <p className="text-sm text-black/70 mt-2">
-                  10.00 am - 06.00 pm (Saterday-Thursday
+                  10.00 am - 06.00 pm (Monday-Saturday)
                 </p>
               </div>
             </div>

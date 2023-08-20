@@ -14,7 +14,7 @@ function Header() {
           <img
             src="/logo.png"
             alt="brand-logo"
-            className="w-16 h-16 shadow-md rounded-full"
+            className="w-[72px] h-[72px] shadow-md rounded-full"
           />
 
           <span className="font-semibold text-2xl">Giftinbox</span>
@@ -22,7 +22,7 @@ function Header() {
         <nav className="navbar hidden md:block">
           <ul className="w-full flex items-center justify-start gap-4">
             <li>
-              <a href="#" className="transition-all">
+              <a href="#services" className="transition-all">
                 Services
               </a>
             </li>
@@ -32,12 +32,12 @@ function Header() {
               </a>
             </li>
             <li>
-              <a href="#" className="transition-all">
+              <a href="#testimonials" className="transition-all">
                 Testimonials
               </a>
             </li>
             <li>
-              <a href="#" className="transition-all">
+              <a href="#contact" className="transition-all">
                 Contact
               </a>
             </li>
