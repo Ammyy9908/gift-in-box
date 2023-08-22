@@ -318,6 +318,13 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="brand-banner my-16">
+        <h2 className="text-2xl md:text-5xl text-center">Our Clients</h2>
+        <div>
+          <img src="/assets/brandwall.png" alt="brand-wall" />
+        </div>
+      </section>
+
       <section className="contact-section py-12 px-5 md:px-16" id="contact">
         <div className="contact-section-container grid grid-cols-1 md:grid-cols-2 gap-16">
           <div className="contact-left">
@@ -403,6 +410,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <Footer />
     </main>
   );
