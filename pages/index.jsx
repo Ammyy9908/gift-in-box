@@ -331,7 +331,7 @@ export default function Home() {
               Company. We consider communication with the customer.
             </p>
 
-            <div className="contact-options grid grid-cols-2 gap-6 mt-6">
+            <div className="contact-options grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
               <div className="contact-option">
                 <div className="flex items-center gap-2">
                   <span>
@@ -381,11 +381,11 @@ export default function Home() {
           </div>
           <div className="contact-lead-form-box w-full">
             <form action="" className="w-full flex flex-col items-start gap-6">
-              <div className="w-full grid grid-cols-2 gap-8">
+              <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8">
                 <FormControl placeholder={"First Name"} />
                 <FormControl placeholder={"Last Name"} />
               </div>
-              <div className="w-full grid grid-cols-2 gap-8">
+              <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8">
                 <FormControl placeholder={"Mail"} />
                 <FormControl placeholder={"Phone"} />
               </div>
