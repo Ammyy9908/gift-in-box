@@ -11,6 +11,7 @@ import TestimonialCard from "@/components/TetimonialCard";
 import ServiceCard from "@/components/ServiceCard";
 import Head from "next/head";
 
+import { BsWhatsapp } from "react-icons/bs";
 function FormControl({ type, name, value, setValue, placeholder }) {
   return (
     <div className="form-control bg-gray-100 h-[42px] px-2">
@@ -405,6 +406,13 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <a
+        href="https://api.whatsapp.com/send?phone=917042508887"
+        className="flex w-12 h-12 bg-green-600 text-white rounded-full items-center justify-center shadow-2xl fixed right-5 bottom-5"
+      >
+        <BsWhatsapp />
+      </a>
 
       <Footer />
     </main>

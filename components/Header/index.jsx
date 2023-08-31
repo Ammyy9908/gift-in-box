@@ -55,36 +55,36 @@ function Header() {
       {toggle && (
         <ul className="mobile-menu w-full flex-col items-start gap-3">
           <li className="w-full py-3 h-full">
-            <Link
-              href={"/"}
+            <a
+              href="#services"
               className="w-full text-center h-full flex items-center justify-center text-xl"
             >
               Services
-            </Link>
+            </a>
           </li>
           <li className="w-full py-3">
-            <Link
-              href={"/"}
+            <a
+              href="#catalog"
               className="w-full text-center h-full flex items-center justify-center text-xl"
             >
               Gift Catalog
-            </Link>
+            </a>
           </li>
           <li className="w-full py-3">
-            <Link
-              href={"/"}
+            <a
+              href={"#testimonials"}
               className="w-full text-center h-full flex items-center justify-center text-xl"
             >
               Testimonials
-            </Link>
+            </a>
           </li>
           <li className="w-full py-3">
-            <Link
-              href={"/"}
+            <a
+              href={"#contact"}
               className="w-full text-center h-full flex items-center justify-center text-xl"
             >
               Contact
-            </Link>
+            </a>
           </li>
         </ul>
       )}
