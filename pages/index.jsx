@@ -350,9 +350,7 @@ export default function Home() {
                   </span>
                   <span className="text-xl font-semibold">Mail Address</span>
                 </div>
-                <p className="text-md text-black/70 mt-2">
-                  utsavm@sarvabyanadi.com
-                </p>
+                <p className="text-md text-black/70 mt-2">info@giftinbox.in</p>
               </div>
               <div className="contact-option">
                 <div className="flex items-center gap-2">
