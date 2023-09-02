@@ -1,9 +1,10 @@
 import React from "react";
 import { AiFillHome } from "react-icons/ai";
+import "animate.css";
 function ServiceCard({ title, description }) {
   return (
     <div
-      className="group overflow-hidden cursor-pointer rounded-md bg-white py-12 px-8 flex flex-col items-center gap-3 hover:shadow-2xl hover:shadow-green-200 hover:scale-105"
+      className="group overflow-hidden cursor-pointer rounded-md bg-white py-12 px-8 flex flex-col items-center gap-3 hover:shadow-2xl hover:shadow-green-200 hover:scale-105 animate__animated animate__slideInUp"
       style={{
         transitionDuration: "1.5s",
       }}

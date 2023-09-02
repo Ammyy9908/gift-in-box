@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import services from "@/data/services";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import "animate.css";
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -149,10 +149,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="catalog-section w-full pt-32" id="catalog">
-        <h1 className="text-center text-3xl font-semibold">Explore Catalog</h1>
+      <section
+        className="catalog-section w-full pt-32 animate__animated animate__slideInUp"
+        id="catalog"
+      >
+        <h1 className="text-center text-3xl font-semibold  animate__animated animate__slideInUp">
+          Explore Catalog
+        </h1>
         <div className="catalog_grid w-full  grid-cols-1 hidden  md:grid md:grid-cols-2 mt-16">
-          <div className="col-span-1 flex items-center justify-center px-6 bg-gray-300/80 lg:px-32">
+          <div className="col-span-1 flex items-center justify-center px-6 bg-gray-300/80 lg:px-32 animate__animated animate__slideInLeft">
             <div className="">
               <h2 className="text-3xl">Dear Valued Clients & Partners</h2>
               <p className="mt-2">
@@ -174,7 +179,7 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="col-span-1">
+          <div className="col-span-1  animate__animated animate__slideInRight">
             <img src="/catalog/Sarva0122 copy.jpg" alt="catalog-first" />
           </div>
         </div>
@@ -206,11 +211,13 @@ export default function Home() {
       </section>
 
       <section
-        className="collection-courosel-container py-16 px-6 md:px-32"
+        className="collection-courosel-container py-16 px-6 md:px-32 "
         id="testimonials"
       >
         <div className="collections-container">
-          <h1 className="text-center text-3xl font-semibold">Testimonials</h1>
+          <h1 className="text-center text-3xl font-semibold animate__animated animate__slideInUp">
+            Testimonials
+          </h1>
           <Swiper
             autoplay={{
               delay: 2500,
@@ -321,7 +328,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="contact-section py-12 px-5 md:px-16" id="contact">
+      <section
+        className="contact-section py-12 px-5 md:px-16 animate__animated animate__slideInUp"
+        id="contact"
+      >
         <div className="contact-section-container grid grid-cols-1 md:grid-cols-2 gap-16">
           <div className="contact-left">
             <h2 className="text-4xl">

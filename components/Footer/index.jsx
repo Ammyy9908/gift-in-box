@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa";
 function Footer() {
   return (
-    <footer className="py-16 px-6 md:px-16 bg-[#f9ebde] flex flex-col items-start gap-6">
+    <footer className="animate__animated animate__slideInUp py-16 px-6 md:px-16 bg-[#f9ebde] flex flex-col items-start gap-6">
       <div className="flex flex-col md:flex-row items-start justify-between w-full gap-12">
         <div className="footer-links grid grid-cols-1 md:grid-cols-3 gap-16">
           <div className="footer-link-box">
