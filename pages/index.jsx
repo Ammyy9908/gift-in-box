@@ -149,8 +149,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="catalog-section w-full pt-32">
-        <h1 className="text-center text-3xl md:text-5xl">Explore Catalog</h1>
+      <section className="catalog-section w-full pt-32" id="catalog">
+        <h1 className="text-center text-3xl font-semibold">Explore Catalog</h1>
         <div className="catalog_grid w-full  grid-cols-1 hidden  md:grid md:grid-cols-2 mt-16">
           <div className="col-span-1 flex items-center justify-center px-6 bg-gray-300/80 lg:px-32">
             <div className="">
@@ -311,7 +311,7 @@ export default function Home() {
       </section>
 
       <section className="brand-banner my-16 px-16">
-        <h2 className="text-2xl md:text-5xl text-center">Our Clients</h2>
+        <h2 className="text-center text-3xl font-semibold">Our Clients</h2>
         <div className="w-full">
           <img
             src="/assets/brandwall.png"
@@ -328,8 +328,7 @@ export default function Home() {
               Feel free to contact with us for any kind of query.
             </h2>
             <p className="mt-3 mb-2">
-              Thank you for your interest in hiring Denver Cleaning Service
-              Company. We consider communication with the customer.
+              Thank you for showing your interest in Giftinbox.
             </p>
 
             <div className="contact-options grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
@@ -340,7 +339,7 @@ export default function Home() {
                   </span>
                   <span className="text-xl font-semibold">Office Address</span>
                 </div>
-                <p className="text-sm text-black/70 mt-2">
+                <p className="text-md text-black/70 mt-2">
                   302, Udyog Vihar Phase II, Gurgaon, Haryana, 122008
                 </p>
               </div>
@@ -351,7 +350,7 @@ export default function Home() {
                   </span>
                   <span className="text-xl font-semibold">Mail Address</span>
                 </div>
-                <p className="text-sm text-black/70 mt-2">
+                <p className="text-md text-black/70 mt-2">
                   utsavm@sarvabyanadi.com
                 </p>
               </div>
@@ -362,7 +361,7 @@ export default function Home() {
                   </span>
                   <span className="text-xl font-semibold">Phone No</span>
                 </div>
-                <p className="text-sm text-black/70 mt-2">
+                <p className="text-md text-black/70 mt-2">
                   Head office: +91-9811870360 <br />
                   Help line: +91-9999868080
                 </p>
@@ -374,7 +373,7 @@ export default function Home() {
                   </span>
                   <span className="text-xl font-semibold">Opening Time</span>
                 </div>
-                <p className="text-sm text-black/70 mt-2">
+                <p className="text-md text-black/70 mt-2">
                   10.00 am - 06.00 pm (Monday-Saturday)
                 </p>
               </div>
