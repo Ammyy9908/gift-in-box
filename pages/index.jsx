@@ -27,16 +27,17 @@ function FormControl({ type, name, value, setValue, placeholder }) {
   );
 }
 
-function KeyPoint() {
+function KeyPoint({ title, tagline, bg }) {
   return (
-    <div className="key-point">
-      <h1 className="font-semibold text-center">Gifts That Tell Stories</h1>
-      <p className="text-black/70">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia
-        dolores accusantium ad incidunt ipsum tempora recusandae consectetur
-        neque, ab doloremque odio explicabo molestiae fugiat cumque, in at rem
-        ut dolor.
-      </p>
+    <div
+      className={`key-point w-full h-[244px] md:h-[344px] ${bg} flex items-center justify-center px-8`}
+    >
+      <div>
+        <h1 className="font-semibold text-center text-2xl">{title}</h1>
+        <p className="text-black/70 text-white text-center md:text-xl mt-2">
+          {tagline}
+        </p>
+      </div>
     </div>
   );
 }
@@ -139,13 +140,32 @@ export default function Home() {
         </div>
       </section> */}
 
-      <section className="brand-keypoints px-6 md:px-32 py-16 bg-green-100">
-        <h1 className="text-center text-2xl">The Knack Difference</h1>
-        <div className="keypoints grid grid-cols-1 md:grid-cols-2 gap-16 mt-12">
-          <KeyPoint />
-          <KeyPoint />
-          <KeyPoint />
-          <KeyPoint />
+      <section className="brand-keypoints bg-green-100">
+        {/* <h1 className="text-center text-2xl">The Knack Difference</h1> */}
+        <div className="keypoints grid grid-cols-1">
+          <div className="w-full grid grid-cos-1 md:grid-cols-2">
+            <KeyPoint
+              title="Crafting Memories"
+              tagline={
+                "One Thoughtful Gift at a Time - Your Perfect Gifting Partner!"
+              }
+              bg="bg-green-500"
+            />
+            <KeyPoint
+              title="Unforgettable Moments"
+              tagline={
+                "Thoughtfully Curated - Elevate Your Gifting Experience!"
+              }
+              bg="bg-yellow-500"
+            />
+          </div>
+          <KeyPoint
+            title="Personalized Perfection"
+            tagline={
+              "Delivered with Care - Redefining the Art of Corporate Gifting!"
+            }
+            bg="bg-red-500"
+          />
         </div>
       </section>
 
@@ -304,7 +324,7 @@ export default function Home() {
         id="services"
       >
         <h1 className="text-center text-3xl font-bold">Our Services</h1>
-        <div className="features w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mt-12">
+        <div className="features w-full grid grid-cols-1  lg:grid-cols-3 gap-16 mt-12">
           {services.map((s, i) => {
             return (
               <ServiceCard
