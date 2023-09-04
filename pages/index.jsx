@@ -173,7 +173,7 @@ export default function Home() {
         className="catalog-section w-full pt-32 animate__animated animate__slideInUp"
         id="catalog"
       >
-        <h1 className="text-center text-3xl font-semibold  animate__animated animate__slideInUp">
+        <h1 className="text-center text-4xl font-semibold  animate__animated animate__slideInUp">
           Explore Catalog
         </h1>
         <div className="catalog_grid w-full  grid-cols-1 hidden  md:grid md:grid-cols-2 mt-16">
@@ -193,6 +193,7 @@ export default function Home() {
               </p>
               <a
                 href="/documents/catalog.pdf"
+                target="__blank"
                 className="flex px-8 py-2 bg-white w-[170px] font-semibold mt-3 hover:shadow-2xl"
               >
                 View Catalog
@@ -220,7 +221,8 @@ export default function Home() {
                 that do most of the marketing for you.
               </p>
               <a
-                href="#"
+                href="/documents/catalog.pdf"
+                target="__blank"
                 className="flex px-8 py-2 bg-white w-[170px] font-semibold mt-3 hover:shadow-2xl"
               >
                 View Catalog
@@ -230,12 +232,23 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="brand-banner my-16 px-16">
+        <h2 className="text-center text-4xl font-semibold">Our Clients</h2>
+        <div className="w-full">
+          <img
+            src="/assets/brandwall.png"
+            alt="brand-wall"
+            className="w-full"
+          />
+        </div>
+      </section>
+
       <section
         className="collection-courosel-container py-16 px-6 md:px-32 "
         id="testimonials"
       >
         <div className="collections-container">
-          <h1 className="text-center text-3xl font-semibold animate__animated animate__slideInUp">
+          <h1 className="text-center text-4xl font-semibold animate__animated animate__slideInUp">
             Testimonials
           </h1>
           <Swiper
@@ -323,7 +336,7 @@ export default function Home() {
         className="who-we-are-section py-32 px-4 md:px-16 bg-[#F6FAFF]"
         id="services"
       >
-        <h1 className="text-center text-3xl font-bold">Our Services</h1>
+        <h1 className="text-center text-4xl font-bold">Our Services</h1>
         <div className="features w-full grid grid-cols-1  lg:grid-cols-3 gap-16 mt-12">
           {services.map((s, i) => {
             return (
@@ -334,17 +347,6 @@ export default function Home() {
               />
             );
           })}
-        </div>
-      </section>
-
-      <section className="brand-banner my-16 px-16">
-        <h2 className="text-center text-3xl font-semibold">Our Clients</h2>
-        <div className="w-full">
-          <img
-            src="/assets/brandwall.png"
-            alt="brand-wall"
-            className="w-full"
-          />
         </div>
       </section>
 

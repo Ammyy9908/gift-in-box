@@ -2,7 +2,7 @@ import React from "react";
 
 function TestimonialCard({ author, brand, description }) {
   return (
-    <div className="testimonial-card shadow-md py-3 px-4 bg-gray-400 rounded-md text-white h-[230px] md:h-[175px]">
+    <div className="testimonial-card shadow-md  bg-gray-400 rounded-md text-white py-12 px-8 h-[294px]">
       <div className="testimonial-header flex items-center gap-8">
         {/* <div className="testimonial-author-avatar w-12 h-12 border-2 border-white rounded-full py-1 px-1">
           <img
