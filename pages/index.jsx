@@ -164,6 +164,7 @@ export default function Home() {
 
     try {
       setLoading(true);
+      console.log(process.env.APP_PASSWORD);
       const r = await axios.post(`/api/contact`, {
         name: fname + " " + lname,
         email: email,
