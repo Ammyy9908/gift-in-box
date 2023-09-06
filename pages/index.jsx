@@ -16,6 +16,7 @@ import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import Spinner from "@/components/Icons/Spinner";
+import { NextSeo } from "next-seo";
 function FormControl({ type, name, value, setValue, placeholder }) {
   return (
     <div className="form-control bg-gray-100 h-[42px] px-2">
@@ -164,7 +165,6 @@ export default function Home() {
 
     try {
       setLoading(true);
-      console.log(process.env.APP_PASSWORD);
       const r = await axios.post(`/api/contact`, {
         name: fname + " " + lname,
         email: email,
@@ -189,15 +189,23 @@ export default function Home() {
 
   return (
     <main className="w-full">
-      <Head>
-        <title>Giftinbox</title>
-        <meta name="description" content="Description of my page" />
-        <meta name="keywords" content="my, page, keywords" />
-        <meta property="og:title" content="My Page Title" />
-        <meta property="og:description" content="Description of my page" />
-        <meta property="og:image" content="URL to image" />
-        {/* Add other SEO-related tags here */}
-      </Head>
+      <NextSeo
+        title="Personalized Gifts for All Occasions | Giftinbox"
+        description="Discover unique, personalized gifts for all occasions at Giftinbox. High-quality, memorable presents with fast shipping. Shop now!"
+        openGraph={{
+          title: "Personalized Gifts for All Occasions | Giftinbox",
+          description:
+            "Discover unique, personalized gifts for all occasions at Giftinbox. High-quality, memorable presents with fast shipping. Shop now!",
+          images: [
+            {
+              url: "/favicon.ico",
+              width: 800,
+              height: 600,
+              alt: "Giftinbox Logo",
+            },
+          ],
+        }}
+      />
 
       <Header />
       <Swiper
