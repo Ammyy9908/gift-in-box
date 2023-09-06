@@ -12,6 +12,10 @@ import ServiceCard from "@/components/ServiceCard";
 import Head from "next/head";
 
 import { BsWhatsapp } from "react-icons/bs";
+import { useState } from "react";
+import axios from "axios";
+import { toast } from "react-hot-toast";
+import Spinner from "@/components/Icons/Spinner";
 function FormControl({ type, name, value, setValue, placeholder }) {
   return (
     <div className="form-control bg-gray-100 h-[42px] px-2">
@@ -60,6 +64,128 @@ function FeatureCard() {
 }
 
 export default function Home() {
+  //contact states
+
+  const [fname, setFname] = useState("");
+  const [lname, setLname] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [msg, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const resetForm = () => {
+    setFname("");
+    setLname("");
+    setEmail("");
+    setPhone("");
+    setMessage("");
+  };
+
+  const checkFormValid = () => {
+    if (!fname || !lname || !email || !phone || !msg) {
+      return false;
+    }
+
+    return true;
+  };
+
+  const isEmailValid = () => {
+    if (!email.includes("@")) {
+      return false;
+    }
+    //check email contains some known domains like google yahoo outook
+    const domains = [
+      "gmail",
+      "yahoo",
+      "outlook",
+      "hotmail",
+      "info",
+      "live",
+      "reddif",
+      "aol",
+      "icloud",
+      "yandex",
+      "zoho",
+      "mail",
+      "gmx",
+      "yopmail",
+      "protonmail",
+      "tu",
+    ];
+
+    const emailDomain = email.split("@")[1].split(".")[0];
+
+    if (!domains.includes(emailDomain)) {
+      return false;
+    }
+
+    return true;
+  };
+
+  //check for indian phone validation
+
+  const isIndianValidPhone = () => {
+    if (phone.length !== 10) {
+      return false;
+    }
+    //also check all chars of phone is not the same
+
+    const chars = phone.split("");
+    let isSame = true;
+    for (let i = 0; i < chars.length - 1; i++) {
+      if (chars[i] !== chars[i + 1]) {
+        isSame = false;
+        break;
+      }
+    }
+    return true;
+  };
+  //handle contact
+
+  const handleContact = async (e) => {
+    e.preventDefault();
+
+    //check if form is valid
+    if (!checkFormValid()) {
+      toast.error("Please fill the form correctly. 😢");
+      return;
+    }
+
+    //check if email is valid
+    if (!isEmailValid()) {
+      toast.error("Please enter a valid email. 😢");
+      return;
+    }
+    //check if phone is valid
+    if (!isIndianValidPhone()) {
+      toast.error("Please enter a valid phone number. 😢");
+      return;
+    }
+
+    try {
+      setLoading(true);
+      const r = await axios.post(`/api/contact`, {
+        name: fname + " " + lname,
+        email: email,
+        message: msg,
+        phone: phone,
+      });
+      console.log(r);
+      const { status } = r.data;
+      if (status === 200) {
+        toast.success(
+          "Thanks for contacting us. We will get back to you soon. 🎉"
+        );
+        resetForm();
+        setLoading(false);
+      }
+    } catch (e) {
+      console.log(e);
+      toast.error("Something went wrong. Please try again later. 😢");
+      setLoading(false);
+    }
+  };
+
   return (
     <main className="w-full">
       <Head>
@@ -410,26 +536,57 @@ export default function Home() {
             </div>
           </div>
           <div className="contact-lead-form-box w-full">
-            <form action="" className="w-full flex flex-col items-start gap-6">
+            <form
+              onSubmit={handleContact}
+              className="w-full flex flex-col items-start gap-6"
+            >
               <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8">
-                <FormControl placeholder={"First Name"} />
-                <FormControl placeholder={"Last Name"} />
+                <FormControl
+                  placeholder={"First Name"}
+                  type="text"
+                  value={fname}
+                  setValue={setFname}
+                  name={"fname"}
+                />
+                <FormControl
+                  placeholder={"Last Name"}
+                  type="text"
+                  value={lname}
+                  setValue={setLname}
+                  name={"lname"}
+                />
               </div>
               <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8">
-                <FormControl placeholder={"Mail"} />
-                <FormControl placeholder={"Phone"} />
+                <FormControl
+                  placeholder={"Mail"}
+                  type="email"
+                  value={email}
+                  setValue={setEmail}
+                  name={"email"}
+                />
+                <FormControl
+                  placeholder={"Phone"}
+                  type="text"
+                  value={phone}
+                  setValue={setPhone}
+                  name={"phone"}
+                />
               </div>
               <div className="w-full grid grid-cols-1 gap-8">
                 <textarea
                   className="bg-gray-100 py-2 px-2"
                   placeholder="Message"
+                  value={msg}
+                  onChange={(e) => setMessage(e.target.value)}
+                  name={"message"}
                 />
               </div>
               <button
                 type="submit"
-                className="w-full h-[42px] bg-green-700 text-white font-semibold"
+                className="w-full h-[42px] bg-green-700 text-white font-semibold flex items-center justify-center"
               >
-                Send a message
+                {loading && <Spinner />}{" "}
+                {loading ? "Sending Message..." : "Send a message"}
               </button>
             </form>
           </div>
