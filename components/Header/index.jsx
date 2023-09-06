@@ -6,7 +6,7 @@ function Header() {
   const [toggle, setToggle] = useState(false);
   return (
     <div className="w-full flex-col items-start ">
-      <div className="w-full px-6 md:px-12 py-2 flex items-center justify-between gap-32">
+      <div className="w-full px-3 md:px-12 py-2 flex items-center justify-between gap-32">
         <Link
           href="/"
           className="px-2 py-2  rounded-md flex items-center gap-2"
@@ -14,7 +14,7 @@ function Header() {
           <img
             src="/logo.png"
             alt="brand-logo"
-            className="w-[72px] h-[72px] shadow-md rounded-full"
+            className="w-[48px] h-[48px] md:w-[72px] md:h-[72px] shadow-md rounded-full"
           />
 
           <span className="font-semibold text-2xl">Giftinbox</span>
