@@ -38,8 +38,8 @@ function KeyPoint({ title, tagline, bg }) {
       className={`key-point w-full h-[244px] md:h-[344px] ${bg} flex items-center justify-center px-8`}
     >
       <div>
-        <h1 className="font-semibold text-center text-2xl">{title}</h1>
-        <p className="text-black/70 text-white text-center md:text-xl mt-2">
+        <h1 className="font-semibold text-center text-3xl">{title}</h1>
+        <p className="text-black/90 text-white text-center md:text-xl mt-2">
           {tagline}
         </p>
       </div>
@@ -284,14 +284,14 @@ export default function Home() {
               tagline={
                 "One Thoughtful Gift at a Time - Your Perfect Gifting Partner!"
               }
-              bg="bg-green-500"
+              bg="bg-[#E3F2DF]"
             />
             <KeyPoint
               title="Unforgettable Moments"
               tagline={
                 "Thoughtfully Curated - Elevate Your Gifting Experience!"
               }
-              bg="bg-yellow-500"
+              bg="bg-[#F2DA91]"
             />
           </div>
           <KeyPoint
@@ -299,7 +299,7 @@ export default function Home() {
             tagline={
               "Delivered with Care - Redefining the Art of Corporate Gifting!"
             }
-            bg="bg-red-500"
+            bg="bg-[#61735A]/20"
           />
         </div>
       </section>

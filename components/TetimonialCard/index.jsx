@@ -12,12 +12,12 @@ function TestimonialCard({ author, brand, description }) {
           />
         </div> */}
         <div className="testimonial-author-content">
-          <h3>{author}</h3>
-          <p className="text-white/70 text-xs">{brand}</p>
+          <h3 className="text-2xl">{author}</h3>
+          <p className="text-white/70 text-lg">{brand}</p>
         </div>
       </div>
       <div className="testimonial-body mt-3">
-        <p className="text-white/70 text-sm">{description}</p>
+        <p className="text-white/70 text-md">{description}</p>
       </div>
     </div>
   );
