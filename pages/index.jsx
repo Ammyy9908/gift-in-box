@@ -41,9 +41,7 @@ function KeyPoint({ title, tagline, bg }) {
         <h1 className="font-semibold text-center text-2xl md:text-3xl">
           {title}
         </h1>
-        <p className="text-black/30 text-white text-center md:text-xl mt-2">
-          {tagline}
-        </p>
+        <p className="text-black  text-center md:text-xl mt-2">{tagline}</p>
       </div>
     </div>
   );
