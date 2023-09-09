@@ -190,7 +190,7 @@ export default function Home() {
   return (
     <main className="w-full">
       <NextSeo
-        title="Personalized Gifts for All Occasions | Giftinbox"
+        title="Gifts for Every Occasion | GiftInbox"
         description="Discover unique, personalized gifts for all occasions at Giftinbox. High-quality, memorable presents with fast shipping. Shop now!"
         openGraph={{
           title: "Personalized Gifts for All Occasions | Giftinbox",
