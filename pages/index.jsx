@@ -471,7 +471,9 @@ export default function Home() {
         className="who-we-are-section py-32 px-4 md:px-16 bg-[#F6FAFF]"
         id="services"
       >
-        <h1 className="text-center text-4xl font-bold">Our Services</h1>
+        <h2 className="text-center text-4xl font-bold">
+          Why Choose GiftInbox for Gifting
+        </h2>
         <div className="features w-full grid grid-cols-1  lg:grid-cols-3 gap-16 mt-12">
           {services.map((s, i) => {
             return (
