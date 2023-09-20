@@ -25,11 +25,14 @@ function Footer() {
         </div>
         <div className="footer-secondary-links">
           <ul className="flex items-center justify-center gap-2">
-            {/* <li>
-              <a href="#">
+            <li>
+              <a
+                href="https://www.instagram.com/giftinbox.in/"
+                className="text-3xl"
+              >
                 <FaInstagram />
               </a>
-            </li> */}
+            </li>
             <li>
               <a
                 href="https://www.facebook.com/profile.php?id=100091581798816&mibextid=LQQJ4d"
